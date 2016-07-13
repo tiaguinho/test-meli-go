@@ -3,11 +3,12 @@ package examples
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/martini-contrib/render"
-	"github.com/tiaguinho/mercadolibre-go-sdk"
 	"log"
 	"net/http"
 	"strconv"
+
+	"github.com/martini-contrib/render"
+	"github.com/tiaguinho/mercadolibre-go-sdk"
 )
 
 var (
@@ -16,7 +17,7 @@ var (
 )
 
 func init() {
-	client = &meli.Client{ClientID: client_id, ClientSecret: client_secret}
+	client = meli.New(client_id, client_secret)
 }
 
 //Home func

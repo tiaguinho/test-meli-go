@@ -1,0 +1,22 @@
+<h1>POST example</h1>
+
+<pre>request: items</pre>
+
+<table class="table table-bordered">	
+	<thead>
+		<th>ID</th>
+		<th>Category ID</th>
+		<th>Title</th>
+		<th>Status</th>
+	</thead>
+	<tbody>
+		{[{ range .}]}
+			<tr>
+				<td>{[{ .ID }]}</td>
+				<td>{[{ .CategoryID }]}</td>
+				<td>{[{ .Title }]}</td>
+				<td>{[{ .Status }]}</td>
+			</tr>
+		{[{ end }]}
+	</tbody>
+</table>

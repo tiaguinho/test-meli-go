@@ -1,0 +1,20 @@
+<h1>DELETE example</h1>
+
+<pre>request: questions</pre>
+
+<table class="table table-bordered">	
+	<thead>
+		<th>ID</th>
+		<th>Question</th>
+		<th align="center">Action</th>
+	</thead>
+	<tbody>
+		{[{ range .Questions}]}
+			<tr>
+				<td>{[{ .ID }]}</td>
+				<td>{[{ .Text }]}</td>
+				<td align="center"><a href="?id={[{ .ID }]}" class="btn btn-danger">Delete</a></td>
+			</tr>
+		{[{ end }]}
+	</tbody>
+</table>

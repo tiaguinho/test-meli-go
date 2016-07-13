@@ -1,0 +1,18 @@
+<h1>GET example</h1>
+
+<pre>request: sites/MLB/categories</pre>
+
+<table class="table table-bordered">	
+	<thead>
+		<th>ID</th>
+		<th>Name</th>
+	</thead>
+	<tbody>
+		{[{ range .}]}
+			<tr>
+				<td>{[{ .ID }]}</td>
+				<td>{[{ .Name }]}</td>
+			</tr>
+		{[{ end }]}
+	</tbody>
+</table>
